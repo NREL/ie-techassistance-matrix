@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="isotope.css">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.1.1/isotope.pkgd.min.js"></script>
+<script>
+
+$(function() {
+    // init Isotope
+    var $container = $('.isotope1').isotope({
+        itemSelector: '.item1'
+    });
+
+
+    // do some awesome math
+    var filterBuilder = function(arr) {
+        console.log('Starting ', arr);
+
+        if (arr.length === 0) {
+            console.log('Array is empty!');
+            return [];
+
+        } else if (arr.length === 1) {
+            console.log('Returning last member of array', arr[0]);
+            return arr[0];
+
+        } else {
+
+            var result = [];
+            var allCasesOfRest = filterBuilder( arr.slice(1) ); // recur with the rest of array
+
+            console.log('allCasesOfRest:', allCasesOfRest);
+            if ( allCasesOfRest.length ) {
+                for (var c in allCasesOfRest) {
+                    if ( arr[0].length ) {
+                        for (var i = 0; i < arr[0].length; i++) {
+                            result.push( arr[0][i] + allCasesOfRest[c] ); // concat and push onto results array
+                        }
+                    } else {
+                        result.push( allCasesOfRest[c] ); //  push onto results array
+                    }
+                }
+            } else {
+                for (var j = 0; j < arr[0].length; j++) {
+                    result.push( arr[0][j] ); // push onto results array
+                }
+            }
+
+            console.log('Returning array ', result);
+            return result;
+        }
+    };
+
+    // store filter for each group
+    var filters = [ [],[],[] ];
+
+    // listen for changes on the checkboxes
+    $('#filters').on( 'change', '.checkbox', function() {
+        var $this
+          , filterType
+          , isChecked
+          , filterValue
+          , index
+          , isotopeFilters;
+
+        $this = $(this);
+
+        // get the filter type (eg color)
+        filterType = $this.parents( '.checkbox-group' ).attr( 'data-filter-type' );
+
+        // did we check or uncheck the box?
+        isChecked = $this.prop( 'checked' );
+
+        // get the filter value (eg red)
+        filterValue =  $this.attr( 'data-filter' );
+
+        // add/remove the filter value (eg red)
+        if( isChecked ) {
+            filters[filterType].push( filterValue );
+        } else {
+            index = filters[filterType].indexOf( filterValue );
+            filters[filterType].splice( index,  1 );
+        }
+
+        // do the math...
+        isotopeFilters = filterBuilder(filters);
+
+        // remove holes/blanks in array
+        isotopeFilters = isotopeFilters.filter( function(e){
+            return e;
+        });
+
+        // convert to comma sep string
+        isotopeFilters = isotopeFilters.toString();
+
+        // tell Isotope to refilter
+        $container.isotope({
+            filter: isotopeFilters
+        });
+    });
+});
+/*
+$(function() {
+
+    var jqxhr = $.getJSON('programs.json');
+
+    jqxhr.done( function(results){
+
+        $.each( results.programs, function(key,result){
+
+            var template = '' +
+                '<div class="item ' + result.filters + '">'+
+                    '<h3><a href="' + result.href + '">' + result.name + '</a></h3>'+
+                    '<p><strong>' + result.agency + '</strong></p>'+
+                    '<p>' + result.description + '</p>'+
+                    '<p><img src="images/refinement.gif" alt="" height="20" width="20">Project development phase: ' + result.phase + '</p>'+
+                    '<p class="types">' + result.type + ' | ' + result.eligibility +'</p>'+
+                '</div>';
+
+            $('#container').append(template);
+        });
+
+        var $container  = $('#container')
+          , $checkboxes = $('#categories input');
+
+        $container.isotope({
+            itemSelector: '.item'
+        });
+
+        $checkboxes.change(function(){
+            var filters = [];
+
+            // get checked checkboxes values
+            $checkboxes.filter( ':checked' ).each( function(){
+              filters.push( this.value );
+            });
+
+            // ['.red', '.blue'] -> '.red, .blue'
+            filters = filters.join(', ');
+
+            $container.isotope({
+                filter: filters
+            });
+        });
+    });
+
+    jqxhr.fail( function(err){
+        console.log('Oh noes! Errroar. ', err);
+    });
+
+});
+*/
+</script>
+
+</head>
+<body>
+
+<div id="filters">
+
+    <div class="ui-group">
+        <h3>Color</h3>
+        <ul class="checkbox-group" data-filter-type="0">
+            <li><label><input type="checkbox" class="checkbox" data-filter=".red">red</label></li>
+            <li><label><input type="checkbox" class="checkbox" data-filter=".blue">blue</label></li>
+            <li><label><input type="checkbox" class="checkbox" data-filter=".yellow">yellow</label></li>
+        </ul>
+    </div>
+
+    <div class="ui-group">
+        <h3>Size</h3>
+        <ul class="checkbox-group" data-filter-type="1">
+            <li><label><input type="checkbox" class="checkbox" data-filter=".small">small</label></li>
+            <li><label><input type="checkbox" class="checkbox" data-filter=".wide">wide</label></li>
+            <li><label><input type="checkbox" class="checkbox" data-filter=".big">big</label></li>
+            <li><label><input type="checkbox" class="checkbox" data-filter=".tall">tall</label></li>
+        </ul>
+    </div>
+
+    <div class="ui-group">
+        <h3>Shape</h3>
+        <ul class="checkbox-group" data-filter-type="2">
+            <li><label><input type="checkbox" class="checkbox" data-filter=".round">round</label></li>
+            <li><label><input type="checkbox" class="checkbox" data-filter=".square">square</label></li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+<div class="isotope1">
+    <div class="item1 small round red"></div>
+    <div class="item1 small round blue"></div>
+    <div class="item1 small round yellow"></div>
+    <div class="item1 small square red"></div>
+    <div class="item1 small square blue"></div>
+    <div class="item1 small square yellow"></div>
+    <div class="item1 wide round red"></div>
+    <div class="item1 wide round blue"></div>
+    <div class="item1 wide round yellow"></div>
+    <div class="item1 wide square red"></div>
+    <div class="item1 wide square blue"></div>
+    <div class="item1 wide square yellow"></div>
+    <div class="item1 big round red"></div>
+    <div class="item1 big round blue"></div>
+    <div class="item1 big round yellow"></div>
+    <div class="item1 big square red"></div>
+    <div class="item1 big square blue"></div>
+    <div class="item1 big square yellow"></div>
+    <div class="item1 tall round red"></div>
+    <div class="item1 tall round blue"></div>
+    <div class="item1 tall round yellow"></div>
+    <div class="item1 tall square red"></div>
+    <div class="item1 tall square blue"></div>
+    <div class="item1 tall square yellow"></div>
+</div>
+
+<hr>
+
+
+<!--
+<div id="categories">
+<ul>
+    <li><input type="checkbox" name="tta" value=".tta" id="tta"><label for="tta">Technical assistance</label> </li>
+
+    <li><input type="checkbox" name="tedu" value=".tedu" id="tedu"><label for="tedu">Education and Capacity building</label> </li>
+
+    <li><input type="checkbox" name="tloan" value=".tloan" id="tloan"><label for="tloan">Loan and loan guarantee programs</label> </li>
+
+    <li><input type="checkbox" name="ttax" value=".ttax" id="ttax"><label for="ttax">Tax credits</label> </li>
+
+    <li><input type="checkbox" name="tgrant" value=".tgrant" id="tgrant"><label for="tgrant">Grants</label>     </li>
+
+    <li><input type="checkbox" name="tir" value=".tir" id="tir"><label for="tir">Information Resources</label>  </li>
+</ul>
+</div>
+
+<div id="container"></div>
+ -->
+</body>
+</html>

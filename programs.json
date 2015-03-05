@@ -1,0 +1,576 @@
+{
+    "programs" : [
+{
+    "name":"USDA Rural Utility Services",
+    "href":"http://www.rurdev.usda.gov/utilities_lp.html",
+    "agency":"Department of Agriculture: Rural Development",
+    "description":"Make direct loans and loan guarantees available to electric utilities to serve customers in rural areas for transmission distribution and generation.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"Alaska Native and tribal corporations | Tribal nonprofit organizations (503-(C)(3))",
+    "filters":"pimple eakcorp  tloan etnonprofit"
+  },
+  {
+    "name":"Bio-Refinery Assistance Program",
+    "href":"http://www.rurdev.usda.gov/BCP_Biorefinery.html",
+    "agency":"Department of Agriculture: Rural Development",
+    "description":"Assists in the development of new and emerging technologies for the development of advanced biofuels by providing loan guarantees up to $250 million for the development, construction, and retrofitting of commercial-scale biorefineries and bio-based product manufacturing facilities.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"All",
+    "filters":"pimple tloan eall"
+  },
+  {
+    "name":"Business and Industry Guaranteed Loan Program  (B&amp;I)",
+    "href":"http://www.rurdev.usda.gov/BCP_gar.html",
+    "agency":"Department of Agriculture: Rural Development",
+    "description":"Aims to improve, develop, or finance business, industry, and employment and improve the economic and environmental climate in rural communities through employment; or reduce reliance on nonrenewable energy resources by encouraging the development and construction of  renewable energy systems.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"Alaska Native and tribal corporations | Tribal nonprofit organizations (503-(C)(3))",
+    "filters":"pimple eakcorp tloan etnonprofit"
+  },
+  {
+    "name":"Intermediary Relending Program",
+    "href":"http://www.rurdev.usda.gov/BCP_irp.html",
+    "agency":"Department of Agriculture: Rural Development",
+    "description":"Provides loans to local organizations (intermediaries) for the establishment of revolving loan funds, which are used to assist with financing business and economic development activity to create or retain jobs in disadvantaged and remote communities. ",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"Federally recognized Tribes and tribal governments | Tribal energy resource development organizations | Tribal nonprofit organizations (503-(C)(3))",
+    "filters":"pimple tloan efed etnonprofit eter"
+  },
+  {
+    "name":"Rural Business Enterprise Grants (RBEG) Program",
+    "href":"http://www.rurdev.usda.gov/BCP_rbeg.html",
+    "agency":"Department of Agriculture: Rural Development",
+    "description":"Provides grants for rural projects that finance and facilitate development of small and emerging rural businesses, help fund distance learning networks, and help fund employment-related adult education programs.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Education and capacity building | Grants",
+    "eligibility":"Federally recognized Tribes and tribal governments | Tribal nonprofit organizations (503-(C)(3)) | Tribal energy resource development organizations",
+    "filters":"pimple tgrant tedu efed etnonprofit eter"
+  },
+  {
+    "name":"Rural Development Energy Programs",
+    "href":"http://www.rurdev.usda.gov/BCP_ReapResEei.html",
+    "agency":"Department of Agriculture: Rural Development",
+    "description":"Provides assistance to qualified applicants to finance renewable energy and energy efficiency projects, and expands the existing private credit structure by providing a credit enhancement via a loan guarantee.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Grants | Loan and loan guarantee programs",
+    "eligibility":"Alaska Native and tribal Corporations | Tribal Energy Resource Development Organizations",
+    "filters":"pimple tgrant tloan"
+  },
+  {
+    "name":"Rural Economic Development Loan and Grant (REDLG)",
+    "href":"http://www.rurdev.usda.gov/BCP_redlg.html",
+    "agency":"Department of Agriculture: Rural Development",
+    "description":"REDLG grantees and borrowers pass the funding on to eligible projects, which can include technical assistance, business incubators, community development assistance, and facilities and equipment. ",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Education and capacity building | Loan and loan guarantee programs | Technical assistance | Grants",
+    "eligibility":"Tribal universities, utilities, and other organized tribal groups",
+    "filters":"pimple tgrant tta tedu tloan etu"
+  },
+  {
+    "name":"USDA Advanced Biofuel Payment Program ",
+    "href":"http://www.rurdev.usda.gov/BCP_Biofuels.html",
+    "agency":"Department of Agriculture: Rural Development",
+    "description":"Provides payments to eligible producers to support and expand production of advanced biofuels refined from sources other than corn kernel starch.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"Tribal universities, utilities, and other organized tribal groups",
+    "filters":"pimple tloan etu"
+  },
+  {
+    "name":"USDA Rural Business Enterprise Grants Program",
+    "href":"http://www.rurdev.usda.gov/BCP_rbeg.html",
+    "agency":"Department of Agriculture: Rural Development",
+    "description":"Provides grants for rural projects that finance and facilitate development of small and emerging rural businesses to help fund distance learning networks and employment-related adult education programs. ",
+    "phase":"STEP 1: Project Potential",
+    "type":"Education and capacity building | Grants",
+    "eligibility":"Federally recognized Tribes and tribal governments | Tribal nonprofit organizations (503-(C)(3)) | Tribal energy resource development organizations",
+    "filters":"ppotential tedu tgrant efed etnonprofit eter"
+  },
+  {
+    "name":"USDA Rural Energy for America - Energy Audit and Renewable Energy Development Assistance ",
+    "href":"http://www.rurdev.usda.gov/BCP_ReapEaReda.html",
+    "agency":"Department of Agriculture: Rural Development",
+    "description":"Provides grant assistance to entities that will assist agriculture producers and small rural businesses by conducting energy audits and providing information on renewable energy development assistance.",
+    "phase":"STEP 1: Project Potential",
+    "type":"Technical assistance",
+    "eligibility":"Tribal universities, utilities, and other organized tribal groups",
+    "filters":"ppotential tta etu"
+  },
+  {
+    "name":"Rural Energy for America Program Guaranteed Loan Program (REAP LOANS)",
+    "href":"http://www.rurdev.usda.gov/BCP_ReapLoans.html",
+    "agency":"Department of Agriculture: Rural Development",
+    "description":"Encourages the commercial financing of renewable energy (bioenergy, geothermal, hydrogen, solar, wind, and hydropower) and energy efficiency projects. Under the program, project developers will work with local lenders who can apply for a loan guarantee on up to 85% of the loan amount. ",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs | Grants",
+    "eligibility":"Alaska Native and tribal corporations | Tribal Energy Resource Development Organizations",
+    "filters":"pimple  tloan tgrant eakcorp"
+  },
+  {
+    "name":"Rural Energy for America Program (REAP)",
+    "href":"http://www.rurdev.usda.gov/Energy.html",
+    "agency":"Department of Agriculture: Rural Development",
+    "description":"Povides grants to agricultural producers and rural small businesses for energy audits and renewable development assistance.",
+    "phase":"STEP 4: Project Implementation | STEP 5: Project Operations &amp; Maintenance",
+    "type":"Technical assistance | Grants | Loan and loan guarantee programs",
+    "eligibility":"All",
+    "filters":"pimple  pops tta tloan eall tgrant"
+  },
+  {
+    "name":"Planning Program and Local Technical Assistance Program",
+    "href":"http://www.eda.gov/funding-opportunities/index.htm",
+    "agency":"Department of Commerce: Economic Development Administration",
+    "description":"Provides partnership planning grants to Tribes to help develop and implement comprehensive economic development strategies and associated economic development activities. ",
+    "phase":"Strategic Energy Planning",
+    "type":"Grants",
+    "eligibility":"All",
+    "filters":"psep tgrant eall"
+  },
+  {
+    "name":"Public Works and Economic Adjustment Assistance Programs",
+    "href":"http://www.grants.gov/web/grants/view-opportunity.html?oppId=248297",
+    "agency":"Department of Commerce: Economic Development Administration",
+    "description":"Provides support for developing, maintaining, and implementing a comprehensive economic development strategy and related short-term planning activities. ",
+    "phase":"Strategic Energy Planning",
+    "type":"Grants",
+    "eligibility":"All",
+    "filters":"psep tgrant eall"
+  },
+  {
+    "name":"Native American Business Development",
+    "href":"http://www.mbda.gov/",
+    "agency":"Department of Commerce: Minority Business Development Administration",
+    "description":"Provisions direct services to American Indian and Alaska Natives, fosters intergovernmental and industry collaboration, and promotes economic and business development opportunities in Indian Country.  ",
+    "phase":"Strategic Energy Planning",
+    "type":"Technical assistance | Education and capacity building",
+    "eligibility":"All",
+    "filters":"psep tta tedu eall"
+  },
+  {
+    "name":"Advanced Research Projects Agency&mdash;Energy (ARPA-E)",
+    "href":"http://arpa-e.energy.gov/",
+    "agency":"Department of Energy: ARPA-E",
+    "description":"Empowers America�s energy researchers with funding, technical assistance, and market readiness to accelerate the pace of energy innovation.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Grants",
+    "eligibility":"All",
+    "filters":"pimple tgrant eall "
+  },
+  {
+    "name":"Tribal Affairs Utility Formation",
+    "href":"http://www.bpa.gov/news/Tribal/Pages/Utility-Formation.aspx",
+    "agency":"Department of Energy: Bonneville Power Administration",
+    "description":"Provides technical assistance on establishing a tribal utility in order to sell power to Bonneville Power Administration.",
+    "phase":"Strategic Energy Planning | STEP 1: Project Potential | STEP 2: Project Options",
+    "type":"Technical assistance",
+    "eligibility":"Tribal universities, utilities, and other organized tribal groups",
+    "filters":"psep ppotential poptions tta etu"
+  },
+  {
+    "name":"Tribal Set-Aside for Low-Income Weatherization",
+    "href":"http://www.bpa.gov/news/Tribal/Pages/Low-Income-Weatherization.aspx",
+    "agency":"Department of Energy: Bonneville Power Administration",
+    "description":"Provides funding targeted toward Native American homes to improve the installation of weatherization measures in both Indian Country and throughout the service territory of its public utility customers.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Grants",
+    "eligibility":"All except state-recognized-only Tribes | Tribal energy resource development organizations ",
+    "filters":"pimple tgrant eallexcept eter"
+  },
+  {
+    "name":"DOE Unsolicited Proposal Process ",
+    "href":"http://energy.gov/diversity/office-economic-impact-and-diversity",
+    "agency":"Department of Energy: Economic Impact and Diversity",
+    "description":"Assists DOE and the Office of Economic Impact and Diversity in meeting National Energy Conservation Policy Act mandates to provide technical assistance and opportunities for minorities, minority educational institutions, and minority business enterprises to participate in DOE's energy programs.  ",
+    "phase":"STEP 1: Project Potential",
+    "type":"Education and capacity building | Technical assistance",
+    "eligibility":"All",
+    "filters":"ppotential tta tedu eall"
+  },
+  {
+    "name":"DOE State &amp; Regional Policy Assistance",
+    "href":"http://energy.gov/oe/services/electricity-policy-coordination-and-implementation/state-and-regional-policy-assistance",
+    "agency":"Department of Energy: Electricity Delivery and Energy Reliability",
+    "description":"Provides unbiased policy assistance and analysis to states and regions on state electricity policies, programs, laws, and regulations that facilitate electricity infrastructure investment needed to deliver clean, affordable, and reliable electricity to customers.",
+    "phase":"Strategic Energy Planning | STEP 1: Project Potential",
+    "type":"Education and capacity building | Technical assistance",
+    "eligibility":"Federally recognized Tribes and tribal governments",
+    "filters":"psep ppotential tta tedu efed"
+  },
+  {
+    "name":"Tribal Energy Program",
+    "href":"http://apps1.eere.energy.gov/tribalenergy/technical_assistance.cfm",
+    "agency":"Department of Energy: Energy Efficiency and Renewable Energy",
+    "description":"Offers financial assistance to Tribes to help them deploy renewable energy resources and reduce their energy consumption through efficiency and weatherization.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Grants",
+    "eligibility":"Federally recognized Tribes and tribal governments",
+    "filters":"pimple tgrant efed"
+  },
+  {
+    "name":"Weatherization Assistance Program",
+    "href":"http://apps1.eere.energy.gov/tribalenergy/financial_opportunities.cfm",
+    "agency":"Department of Energy: Energy Efficiency and Renewable Energy",
+    "description":"Enables low-income families to permanently reduce their energy bills by making their homes more energy efficient. ",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Grants",
+    "eligibility":"All",
+    "filters":"pimple tgrant eall"
+  },
+  {
+    "name":"Federal Agency Power Purchases",
+    "href":"http://energy.gov/eere/femp/site-renewable-power-purchase-agreements",
+    "agency":"Department of Energy: Federal Energy Management Program",
+    "description":"Allows federal agencies to fund on-site renewable energy projects with no up-front capital costs incurred. ",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Technical assistance",
+    "eligibility":"Tribal universities, utilities, and other organized tribal groups",
+    "filters":"pimple tta etu"
+  },
+  {
+    "name":"DOE On-Request Technical Assistance",
+    "href":"http://energy.gov/indianenergy/resources/technical-assistance",
+    "agency":"Department of Energy: Indian Energy Policy and Programs",
+    "description":"Provides up to 40 hours of technical assistance designed to advance tribal renewable energy and energy efficiency projects. ",
+    "phase":"Strategic Energy Planning | STEP 1: Project Potential | STEP 2: Project Options | STEP 3: Project Refinement | STEP 4: Project Implementation",
+    "type":"Technical assistance ",
+    "eligibility":"All except state-recognized-only Tribes",
+    "filters":"pimple psep ppotential poptions pref tta eallexcept"
+  },
+  {
+    "name":"DOE Strategic Technical Assistance Response Team (START) Program",
+    "href":"http://energy.gov/indianenergy/resources/start-program",
+    "agency":"Department of Energy: Indian Energy Policy and Programs",
+    "description":"Provides selected tribal entities in the 48 contiguous states and Alaska with technical assistance from DOE and national laboratory experts to advance the development and accelerate the implementation of tribal renewable energy projects.",
+    "phase":"STEP 2: Project Options",
+    "type":"Technical assistance",
+    "eligibility":"All except state-recognized-only Tribes",
+    "filters":"poptions tta eallexcept"
+  },
+  {
+    "name":"Loan Guarantee Program (LPO)",
+    "href":"http://loanprograms.energy.gov/",
+    "agency":"Department of Energy: Loan Guarantee Program Office",
+    "description":"Supports innovative clean energy technologies that are typically unable to obtain conventional private financing due to high technology risks, including hydrogen, solar, wind/hydropower, nuclear, advanced fossil energy coal, carbon sequestration practices/technologies, electricity delivery and energy reliability, alternative fuel vehicles, industrial energy efficiency projects, and pollution control equipment.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"All",
+    "filters":"pimple tloan eall"
+  },
+  {
+    "name":"Transmission Infrastructure Program",
+    "href":"http://ww2.wapa.gov/sites/Western/transmission/tip/Pages/default.aspx",
+    "agency":"Department of Energy: Western Area Power Administration",
+    "description":"Provides project development technical assistance to developers and other interested parties who have a proposal to construct new or upgrade existing electric power transmission lines and related facilities.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"Tribal universities, utilities, and other organized tribal groups",
+    "filters":"pimple tloan etu"
+  },
+  {
+    "name":"Education and Capacity Building",
+    "href":"Education and Capacity Building",
+    "agency":"Department of Energy: Indian Energy Policy and Programs",
+    "description":"Provides education and training resources such as renewable energy online learning, forums, webinars, presentations, and more.",
+    "phase":"Strategic Energy Planning",
+    "type":"Education and capacity building | Technical assistance | Grants",
+    "eligibility":"All except state-recognized-only Tribes",
+    "filters":"psep tgrant tta tedu eallexcept"
+  },
+  {
+    "name":"Social and Economic Development Strategies Grants",
+    "href":"http://www.acf.hhs.gov/programs/ana/programs/seds/about",
+    "agency":"Department of Health and Human Services: ACF/Administration for Native Americans",
+    "description":"Support locally determined projects designed to reduce or eliminate community problems and achieve community goals.",
+    "phase":"Strategic Energy Planning",
+    "type":"Grants",
+    "eligibility":"All",
+    "filters":"psep tgrant eall"
+  },
+  {
+    "name":"Training and Technical Assistance",
+    "href":"http://www.acf.hhs.gov/programs/ana/assistance",
+    "agency":"Department of Health and Human Services: ACF/Administration for Native Americans",
+    "description":"Provides training and technical assistance in planning, developing, conducting, and administering ANA projects, short-term in-service training for personnel working on ANA-funded projects, and upon denial of a grant application, technical assistance in revising a grant proposal.",
+    "phase":"Strategic Energy Planning",
+    "type":"Education and capacity building | Technical assistance",
+    "eligibility":"All",
+    "filters":"psep tta tedu eall"
+  },
+  {
+    "name":"Water Sense Program",
+    "href":"http://www.energy.gov/news/8793.htm",
+    "agency":"Department of the Interior: Bureau of Reclamation/Department of Energy",
+    "description":"Supports environmentally responsible projects that increase the generation of reliable hydropower for the nation's electricity supply.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Grants",
+    "eligibility":"Federally recognized Tribes and tribal governments",
+    "filters":"pimple tgrant efed"
+  },
+  {
+    "name":"Climate Change Adaptation",
+    "href":"http://www.bia.gov/WhoWeAre/RegionalOffices/Pacific/NaturalResources/index.htm",
+    "agency":"Department of the Interior: Bureau of Indian Affairs",
+    "description":"Provides grants to support tribal planning and assessment efforts for climate change adaptation and mitigation strategies",
+    "phase":"Strategic Energy Planning | STEP 1: Project Potential",
+    "type":"Grants",
+    "eligibility":"Federally recognized Tribes and tribal governments",
+    "filters":"psep ppotential tgrant efed"
+  },
+  {
+    "name":"Tribal Energy Development Capacity Grant",
+    "href":"http://www.bia.gov/WhoWeAre/AS-IA/IEED/",
+    "agency":"Department of the Interior: Indian Energy and Economic Development",
+    "description":"Assists Tribes in the development of energy resources and further the goal of Indian self-determination. ",
+    "phase":"Strategic Energy Planning",
+    "type":"Grants",
+    "eligibility":"All except state-recognized-only Tribes",
+    "filters":"psep tgrant eallexcept"
+  },
+  {
+    "name":"DOI Energy and Mineral Development Program ",
+    "href":"http://www.bia.gov/WhoWeAre/AS-IA/IEED/DEMD/index.htm",
+    "agency":"Department of the Interior: Indian Energy and Economic Development ",
+    "description":"Provides federally recognized Tribes and Indian allottees on trust land with financial assistance to evaluate energy and mineral resource potential on their lands and, in turn, the information they need to promote their lands, negotiate the best agreements with partners or investors, and develop their energy resources.",
+    "phase":"STEP 1: Project Potential",
+    "type":"Education and capacity building | Technical assistance | Grants",
+    "eligibility":"All except state-recognized-only Tribes",
+    "filters":"ppotential tta tedu tgrant eallexcept"
+  },
+  {
+    "name":"DOI Tribal Energy Development Capacity Grant ",
+    "href":"http://www.bia.gov/WhoWeAre/AS-IA/IEED/",
+    "agency":"Department of the Interior: Indian Energy and Economic Development ",
+    "description":"Develops the tribal managerial, organizational and technical capacity Tribes need to develop or enhance their business and regulatory environment in order to maximize the economic impact of  energy resource development on Indian land.",
+    "phase":"STEP 1: Project Potential",
+    "type":"Grants",
+    "eligibility":"All except state-recognized-only Tribes",
+    "filters":"ppotential tgrant eallexcept"
+  },
+  {
+    "name":"Energy Resource Development, Associated Environmental Impacts, and Mitigation Measures",
+    "href":"http://teeic.indianaffairs.gov/index.htm",
+    "agency":"Department of the Interior: Indian Energy and Economic Development ",
+    "description":"Provides information about energy resource development and associated environmental impacts and mitigation measures; guidance for conducting site-specific environmental assessments and developing monitoring programs; information about applicable federal laws and regulations; and federal and tribal points of contact.",
+    "phase":"STEP 2: Project Options",
+    "type":"Information resources",
+    "eligibility":"All",
+    "filters":"poptions tir eall"
+  },
+  {
+    "name":"Loan Guaranty, Insurance, and Interest Subsidy Program",
+    "href":"http://www.bia.gov/WhoWeAre/AS-IA/IEED/LoanProgram/index.htm",
+    "agency":"Department of the Interior: Indian Energy and Economic Development ",
+    "description":"Encourages eligible borrowers to develop viable Indian businesses through conventional lender financing, which helps lenders reduce excessive risks on loans they make and helps borrowers secure conventional financing that might otherwise be unavailable.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"Federally recognized Tribes and tribal governments",
+    "filters":"pimple tloan efed"
+  },
+  {
+    "name":"Community Development Financial Institutions Fund (CDFI Fund)",
+    "href":"http://www.cdfifund.gov/",
+    "agency":"Department of the Treasury: CDFI Fund",
+    "description":"Promotes economic revitalization and community development through investment in and assistance to community development financial institutions.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Grants | Loan and loan guarantee programs",
+    "eligibility":"All",
+    "filters":"pimple tloan tgrant eall"
+  },
+  {
+    "name":"Community Development Financial Institutions Fund (CDFI Fund) Native Initiatives Native American CDFI Assistance (NACA) Program",
+    "href":"http://www.cdfifund.gov/what_we_do/programs_id.asp?programID=3",
+    "agency":"Department of the Treasury: CDFI Fund",
+    "description":"Seeks to increase the access to credit, capital, and financial services in Native communities through the creation and expansion of CDFIs primarily serving Native communities.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Grants | Loan and loan guarantee programs",
+    "eligibility":"Tribal energy resource development organizations",
+    "filters":"pimple tloan tgrant eter"
+  },
+  {
+    "name":"Community Development Financial Institutions Fund (CDFI Fund) New Markets Tax Credit  (NMTC) Program",
+    "href":"http://www.cdfifund.gov/what_we_do/programs_id.asp?programID=5",
+    "agency":"Department of the Treasury: CDFI Fund",
+    "description":"Helps small- and medium-sized businesses in low-income communities access financing that is flexible and affordable. Financing from CDEs can apply to a wide range of projects, including housing developments, renewable energy installations, and facilities that provide community services.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Tax credits",
+    "eligibility":"Federally recognized Tribes and tribal governments | Tribal energy resource development organizations | Alaska Native and tribal corporations",
+    "filters":"pimple ttax efed eakcorp eter"
+  },
+  {
+    "name":"Qualified Energy Conservation Bonds (QECBs)",
+    "href":"http://www1.eere.energy.gov/wip/solutioncenter/qecb.html",
+    "agency":"Department of the Treasury: Energy Efficiency and Renewable Energy",
+    "description":"Enables qualified state, tribal, and local government issuers to borrow money at attractive rates to fund energy conservation projects. ",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"Federally recognized Tribes and tribal governments",
+    "filters":"pimple tloan efed"
+  },
+  {
+    "name":"Clean Renewable Energy Bonds (\"New CREBs\")",
+    "href":"http://www.energy.gov/additionaltaxbreaks.htm",
+    "agency":"Department of the Treasury: Internal Revenue Service",
+    "description":"Issues tax-credit bonds to deploy renewable energy projects.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"Federally recognized Tribes and tribal governments",
+    "filters":"pimple tloan efed"
+  },
+  {
+    "name":"Partnership for Sustainable Communities",
+    "href":"http://www.sustainablecommunities.gov/",
+    "agency":"Environmental Protection Agency/Department of Housing and Urban Development/Department of Transportation",
+    "description":"Aids places around the country in developing in more environmentally and economically sustainable ways.",
+    "phase":"Strategic Energy Planning",
+    "type":"Education and capacity building | Technical assistance",
+    "eligibility":"All",
+    "filters":"psep tta tedu eall"
+  },
+  {
+    "name":"Clean Energy Programs (ENERGY STAR, State and Local Climate and Energy Program, and Combined Heat &amp; Power Partnership)",
+    "href":"http://www.energystar.gov",
+    "agency":"Environmental Protection Agency: Air and Radiation/Atmospheric Programs",
+    "description":"Helps energy consumers and clean energy stakeholders learn about energy efficiency, renewable energy, and combined heat and power and related policy options by providing objective information and resources, creating networks between the public and private sector, and providing technical assistance. ",
+    "phase":"Strategic Energy Planning",
+    "type":"Information resources",
+    "eligibility":"All",
+    "filters":"psep tir eall"
+  },
+  {
+    "name":"Green Power Partnership",
+    "href":"http://www.epa.gov/greenpower",
+    "agency":"Environmental Protection Agency: Air and Radiation/Atmospheric Programs",
+    "description":"Supports the organizational procurement of green power by offering expert advice, technical support, tools, and resources that can help lower the transaction costs of buying green power and communicate leadership to key stakeholders. ",
+    "phase":"Strategic Energy Planning",
+    "type":"Information resources | Education and capacity building",
+    "eligibility":"All",
+    "filters":"psep tir tedu eall"
+  },
+  {
+    "name":"Diesel Emissions Reduction National Funding Assistance Program",
+    "href":"http://www.epa.gov/cleandiesel/prgtribal.htm",
+    "agency":"Environmental Protection Agency: Air and Radiation/Transportation and Air Quality",
+    "description":"Offers sector-specific rebate opportunities, as well as eligible tribal and nontribal competitive grant opportunities to help fund diesel emissions reducing engine projects.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Grants",
+    "eligibility":"Federally recognized Tribes and tribal governments",
+    "filters":"pimple  efed tgrant"
+  },
+  {
+    "name":"Brownfields Development - Technical Assistance Grants",
+    "href":"http://epa.gov/brownfields/index.html",
+    "agency":"Environmental Protection Agency: Solid Waste and Emergency Response/Brownfields and Land Revitalization",
+    "description":"Provide technical assistance to local stakeholders, including Tribes, through the technical assistance to Brownfields Communities Program.",
+    "phase":"STEP 1: Project Potential",
+    "type":"Education and capacity building | Technical assistance",
+    "eligibility":"All",
+    "filters":"ppotential tta tedu eall"
+  },
+  {
+    "name":"Brownfields Development - ARC, AWP, JT Grants",
+    "href":"http://epa.gov/brownfields/index.html",
+    "agency":"Environmental Protection Agency: Solid Waste and Emergency Response/Brownfields and Land Revitalization",
+    "description":"Provide direct funding for brownfields assessment, revolving loan fund, and cleanup (ARC); area wide planning (AWP); and environmental job training (JT) grants.",
+    "phase":"STEP 1: Project Potential",
+    "type":"Education and capacity building | Technical assistance",
+    "eligibility":"All",
+    "filters":"ppotential tta tedu eall"
+  },
+  {
+    "name":"RE-Powering America's Land",
+    "href":"http://www.epa.gov/renewableenergyland/",
+    "agency":"Environmental Protection Agency: Solid Waste and Emergency Response/Center for Program Analysis",
+    "description":"Identifies the renewable energy potential of current and formerly contaminated lands, landfills, and mine sites and provides other useful resources for communities, developers, industry, state, and local governments, or anyone interested in reusing these sites for renewable energy development, when such development aligns with the community's vision for the site.",
+    "phase":"STEP 1: Project Potential",
+    "type":"Education and capacity building | Technical assistance",
+    "eligibility":"All",
+    "filters":"ppotential tta tedu eall"
+  },
+  {
+    "name":"Healthy Homes Production Program ",
+    "href":"http://portal.hud.gov/hudportal/HUD?src=/program_offices/administration/grants/nofa11/grphealthyhomes",
+    "agency":"Housing and Urban Development: Lead Hazard Control and Healthy Homes ",
+    "description":"Supports projects that identify and correct significant housing-related health and safety hazards in privately owned, low-income rental, or owner-occupied housing.",
+    "phase":"STEP 4: Project Implementation",
+    "type":"Grants",
+    "eligibility":"Federally recognized Tribes and tribal governments",
+    "filters":"pimple tgrant efed"
+  },
+  {
+    "name":"504 Loan Program",
+    "href":"http://www.sba.gov/category/navigation-structure/loans-grants/small-business-loans/sba-loan-programs/real-estate-and-eq",
+    "agency":"Small Business Administration",
+    "description":"Provides growing businesses with long-term, fixed-rate financing for major fixed assets, such as land and buildings.",
+    "phase":"STEP 1: Project Potential | STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"All",
+    "filters":"ppotential pimple tloan eall"
+  },
+  {
+    "name":"7(a) Loan Program",
+    "href":"http://www.sba.gov/category/navigation-structure/loans-grants/small-business-loans/sba-loan-programs/7a-loan-program",
+    "agency":"Small Business Administration",
+    "description":"Provides business loans to American small businesses, proceeds from which may generally be used to establish a new business or to assist in the operation, acquisition, or expansion of an existing business. ",
+    "phase":"STEP 1: Project Potential | STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"All",
+    "filters":"ppotential pimple tloan eall"
+  },
+  {
+    "name":"Community Advantage ",
+    "href":"http://www.sba.gov/content/community-advantage ",
+    "agency":"Small Business Administration",
+    "description":"Offer a streamlined application process for SBA 7(a) loans up to $250,000.",
+    "phase":"STEP 1: Project Potential | STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"All",
+    "filters":"ppotential pimple tloan eall"
+  },
+  {
+    "name":"Export Express ",
+    "href":"http://www.sba.gov/exportexpress ",
+    "agency":"Small Business Administration",
+    "description":"Offers financing up to $500,000, in the form of a term loan or a revolving line of credit, through a simple, streamlined application process; loan proceeds may be used for business purposes that will enhance a company�s export development. ",
+    "phase":"STEP 1: Project Potential | STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"All",
+    "filters":"ppotential pimple tloan eall"
+  },
+  {
+    "name":"Microloan Program ",
+    "href":"http://www.sba.gov/exportexpress ",
+    "agency":"Small Business Administration",
+    "description":"Provides loans up to $50,000 to help small businesses and certain not-for-profit childcare centers start up and expand.",
+    "phase":"STEP 1: Project Potential | STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"All",
+    "filters":"ppotential pimple tloan eall"
+  },
+  {
+    "name":"SBA Express",
+    "href":"http://www.sba.gov/content/sba-express",
+    "agency":"Small Business Administration",
+    "description":"Features an accelerated turnaround time for SBA review, with a response to an application given within 36 hours. Maximum loan amount is $350,000.",
+    "phase":"STEP 1: Project Potential | STEP 4: Project Implementation",
+    "type":"Loan and loan guarantee programs",
+    "eligibility":"All",
+    "filters":"ppotential pimple tloan eall"
+  },
+  {
+    "name":"Indian Environmental General Assistance Program",
+    "href":"http://www.epa.gov/region9/funding/tribal-gap.html",
+    "agency":"Environmental Protection Agency&mdash;Region 9",
+    "description":"The goal of the General Assistance Program (GAP) is to assist tribes in developing the capacity to plan and establish environmental protection programs and to develop and implement solid and hazardous waste programs in accordance with their individual needs.",
+    "phase":"STEP 1: Project Potential",
+    "type":"Grant",
+    "eligibility":"Federally recognized Tribes and tribal governments",
+    "filters":"ppotential tgrant efed"
+  }
+]
+}
+
+
