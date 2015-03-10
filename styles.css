@@ -19,20 +19,6 @@ body {
 
 
 
-/* ---- isotope ---- */
-
-.isotope1 {
-  background: #DDD;
-  max-width: 1200px;
-}
-
-/* clear fix */
-.isotope1:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
 /* ui group */
 
 .ui-group {
@@ -55,32 +41,6 @@ li {
   display: inline-block;
   margin-right: 20px;
 }
-
-/* item */
-
-.item1 {
-  width: 70px;
-  height: 70px;
-  margin: 5px;
-  float: left;
-}
-
-.item1.round {
-  border-radius: 35px;
-}
-
-.item1.big.round {
-  border-radius: 75px;
-}
-
-.item1.red { background: red; }
-.item1.blue { background: blue; }
-.item1.yellow { background: yellow; }
-
-.item1.wide, .item1.big { width: 150px; }
-.item1.tall, .item1.big { height: 150px; }
-
-
 
 /**** Isotope Filtering ****/
 
@@ -208,8 +168,10 @@ body {
 .italic {font-style:italic;}
 
 
-/* End ME, start jessica */
 
-.item img {float:left;margin-right:5px;margin-bottom:15px;}
+.item img {
+    margin-right:5px;
+    vertical-align: text-top;
+}
 
 
