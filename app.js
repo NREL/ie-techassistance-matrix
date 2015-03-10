@@ -116,7 +116,7 @@ $(function() {
     var filters = countFilterGroups(' .checkbox-group' );
 
     //var jqxhr = $.getJSON('data.json');
-    var jqxhr = $.getJSON('http://localhost:3000/api/Programs');
+    var jqxhr = $.getJSON('http://xcomm2dev.nrel.gov:8080/api/Programs');
 
     jqxhr.done( buildCards, initIsotope );
 
