@@ -6,15 +6,35 @@
 'use strict';
 
 $(function() {
+    var $container = $('#container');
+    var $filters   = $('#filters');
+
+    /*
+     *  init Isotope
+     *  Requires DOM to be set up
+     */
+    var initIsotope = function(){
+
+        $container.isotope({
+            itemSelector: '.item'
+        });
+
+    };
 
 
-    // init Isotope
-    var $container = $('.isotope1').isotope({
-        itemSelector: '.item1'
-    });
+    var refilterIsotope = function( filterlist ){
+        console.log('refilter ', filterlist);
+        $container.isotope({
+            filter: filterlist
+        });
+
+    };
 
 
-    // do some awesome math
+    /*
+     *  build out filter arrays (array of arrays)
+     *
+     */
     var filterBuilder = function(arr) {
         var result
           , allCasesOfRest
@@ -50,8 +70,11 @@ $(function() {
     };
 
 
-    // figure out how many filter groups we have and set up our filter array
-    var buildFilterArray = function(filterClass) {
+    /*
+     *  figure out how many filter groups we have and set up our filter array
+     *
+     */
+    var countFilterGroups = function(filterClass) {
         var numFilterGroups =  $( filterClass ).length
           , arr = []
           , i;
@@ -64,11 +87,43 @@ $(function() {
     };
 
 
+
+    /*
+     *  build the HTML cards
+     *  return none
+     *  modifies DOM
+     */
+    var buildCards = function( results ){
+
+        $.each( results, function(key,result){
+
+            var template = '' +
+                '<div class="item ' + result.filters + '">'+
+                    '<h3><a href="' + result.href + '">' + result.name + '</a></h3>'+
+                    '<p><strong>' + result.agency + '</strong></p>'+
+                    '<p>' + result.description + '</p>'+
+                    '<p><img src="images/refinement.gif" alt="" height="20" width="20">Project development phase: ' + result.phase + '</p>'+
+                    '<p class="types">' + result.type + ' | ' + result.eligibility +'</p>'+
+                '</div>';
+
+            $('#container').append(template);
+        });
+
+    };
+
+
     // store filter for each group
-    var filters = buildFilterArray(' .checkbox-group' );
+    var filters = countFilterGroups(' .checkbox-group' );
+
+    //var jqxhr = $.getJSON('data.json');
+    var jqxhr = $.getJSON('http://localhost:3000/api/Programs');
+
+    jqxhr.done( buildCards, initIsotope );
+
 
     // listen for changes on the checkboxes
-    $('#filters').on( 'change', '.checkbox', function() {
+    $filters.on( 'change', '.checkbox', function() {
+
         var $this
           , filterType
           , isChecked
@@ -106,60 +161,9 @@ $(function() {
         // convert the array to comma sep string
         isotopeFilters = isotopeFilters.toString();
 
-        // tell Isotope to refilter
-        $container.isotope({
-            filter: isotopeFilters
-        });
-    });
-});
-/*
-$(function() {
+        refilterIsotope( isotopeFilters );
 
-    var jqxhr = $.getJSON('programs.json');
-
-    jqxhr.done( function(results){
-
-        $.each( results.programs, function(key,result){
-
-            var template = '' +
-                '<div class="item ' + result.filters + '">'+
-                    '<h3><a href="' + result.href + '">' + result.name + '</a></h3>'+
-                    '<p><strong>' + result.agency + '</strong></p>'+
-                    '<p>' + result.description + '</p>'+
-                    '<p><img src="images/refinement.gif" alt="" height="20" width="20">Project development phase: ' + result.phase + '</p>'+
-                    '<p class="types">' + result.type + ' | ' + result.eligibility +'</p>'+
-                '</div>';
-
-            $('#container').append(template);
-        });
-
-        var $container  = $('#container')
-          , $checkboxes = $('#categories input');
-
-        $container.isotope({
-            itemSelector: '.item'
-        });
-
-        $checkboxes.change(function(){
-            var filters = [];
-
-            // get checked checkboxes values
-            $checkboxes.filter( ':checked' ).each( function(){
-              filters.push( this.value );
-            });
-
-            // ['.red', '.blue'] -> '.red, .blue'
-            filters = filters.join(', ');
-
-            $container.isotope({
-                filter: filters
-            });
-        });
-    });
-
-    jqxhr.fail( function(err){
-        console.log('Oh noes! Errroar. ', err);
     });
 
 });
-*/
+
