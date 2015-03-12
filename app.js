@@ -23,10 +23,24 @@ $(function() {
 
 
     var refilterIsotope = function( filterlist ){
-        console.log('refilter ', filterlist);
+
         $container.isotope({
             filter: filterlist
         });
+
+    };
+
+    /*
+     *  If there are no items visible, show a message.
+     *
+     */
+    var toggleMessage = function(){
+
+        if( !$container.data('isotope').filteredItems.length ) {
+            $('.message').removeClass('hide');
+        } else {
+            $('.message').addClass('hide');
+        }
 
     };
 
@@ -115,8 +129,14 @@ $(function() {
     // store filter for each group
     var filters = countFilterGroups(' .checkbox-group' );
 
-    //var jqxhr = $.getJSON('data.json');
-    var jqxhr = $.getJSON('http://xcomm2.nrel.gov:8081/api/Programs');
+    var api = {
+        protocol : '//'
+      , host     : 'developer.nrel.gov'
+      , url      : '/api/indianenergyta/programs'
+      , params   : '?api_key=0mKfgtyJPcn9jLdpHcZMkiUbMRJCVuEu7k7xvmHx'
+    };
+
+    var jqxhr = $.getJSON( api.protocol + api.host + api.url + api.params);
 
     jqxhr.done( buildCards, initIsotope );
 
@@ -162,6 +182,8 @@ $(function() {
         isotopeFilters = isotopeFilters.toString();
 
         refilterIsotope( isotopeFilters );
+
+        toggleMessage();
 
     });
 
