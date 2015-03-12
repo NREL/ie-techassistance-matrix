@@ -13,7 +13,7 @@ $(function() {
      *  init Isotope
      *  Requires DOM to be set up
      */
-    var initIsotope = function(){
+    var initIsotope = function() {
 
         $container.isotope({
             itemSelector: '.item'
@@ -22,7 +22,7 @@ $(function() {
     };
 
 
-    var refilterIsotope = function( filterlist ){
+    var refilterIsotope = function(filterlist) {
 
         $container.isotope({
             filter: filterlist
@@ -34,12 +34,12 @@ $(function() {
      *  If there are no items visible, show a message.
      *
      */
-    var toggleMessage = function(){
+    var toggleMessage = function() {
 
-        if( !$container.data('isotope').filteredItems.length ) {
-            $('.message').removeClass('hide');
+        if ( !$container.data('isotope').filteredItems.length ) {
+            $( '.message' ).removeClass('hide');
         } else {
-            $('.message').addClass('hide');
+            $( '.message' ).addClass('hide');
         }
 
     };
@@ -89,11 +89,11 @@ $(function() {
      *
      */
     var countFilterGroups = function(filterClass) {
-        var numFilterGroups =  $( filterClass ).length
+        var numFilterGroups = $(filterClass).length
           , arr = []
           , i;
 
-        for( i=0; i < numFilterGroups; i=i+1) {
+        for (i = 0; i < numFilterGroups; i = i + 1) {
             arr.push([]);
         }
 
@@ -107,36 +107,70 @@ $(function() {
      *  return none
      *  modifies DOM
      */
-    var buildCards = function( results ){
+    var buildCards = function(results) {
 
-        $.each( results, function(key,result){
+        var icons = [];
 
-            var template = '' +
-                '<div class="item ' + result.filters + '">'+
-                    '<h3><a href="' + result.href + '">' + result.name + '</a></h3>'+
-                    '<p><strong>' + result.agency + '</strong></p>'+
-                    '<p>' + result.description + '</p>'+
-                    '<p><img src="images/refinement.gif" alt="" height="20" width="20">Project development phase: ' + result.phase + '</p>'+
-                    '<p class="types">' + result.type + ' | ' + result.eligibility +'</p>'+
-                '</div>';
+        $filters
+            .find( '[data-filter-group="phase"]' )
+                .find( '[data-filter]' )
+                    .each( function(key) {
+                        icons[key] = $(this).data('icon');
+                    });
 
-            $('#container').append(template);
+
+        //console.log('icons:', icons);
+
+        $.each( results, function(key, result) {
+
+            var template;
+
+            template = '<div class="item ' + result.filters + '">';
+            template +=  '<h3><a href="' + result.href + '">' + result.name + '</a></h3>';
+            template +=  '<p><strong>' + result.agency + '</strong></p>';
+            template +=  '<p>' + result.description + '</p>';
+            template +=  '<p>Project development phase: </p>';
+            template +=  '<div class="phases">';
+
+            result.phase.map( function(val, idx) {
+
+                var phase = result.phase[idx].match(/\d/);
+
+                // if match() returns null, use 0, otherwise use the match
+                phase = phase ? phase[0] : 0;
+
+                template += '<p><img src="assets/images/' + icons[phase] + '" alt="" />' + result.phase[idx] + '</p>';
+
+            });
+
+            template +=  '</div>';
+            template +=  '<p class="types">' + result.type + ' | ' + result.eligibility + '</p>';
+            template += '</div>';
+
+            $container.append(template);
         });
 
     };
 
 
     // store filter for each group
-    var filters = countFilterGroups(' .checkbox-group' );
+    var filters = countFilterGroups( '.checkbox-group' );
 
     var api = {
-        protocol : '//'
-      , host     : 'developer.nrel.gov'
-      , url      : '/api/indianenergyta/programs'
-      , params   : '?api_key=0mKfgtyJPcn9jLdpHcZMkiUbMRJCVuEu7k7xvmHx'
+        protocol: '//'
+      , host: 'developer.nrel.gov'
+      , url: '/api/indianenergyta/programs'
+      , params: '?api_key=0mKfgtyJPcn9jLdpHcZMkiUbMRJCVuEu7k7xvmHx'
     };
 
-    var jqxhr = $.getJSON( api.protocol + api.host + api.url + api.params);
+    // var apix ={
+    //     protocol : '//'
+    //   , host     : 'localhost:8081'
+    //   , url      : '/api/programs'
+    //   , params   : ''
+    // };
+
+    var jqxhr = $.getJSON( api.protocol + api.host + api.url + api.params );
 
     jqxhr.done( buildCards, initIsotope );
 
@@ -160,21 +194,21 @@ $(function() {
         isChecked = $this.prop( 'checked' );
 
         // get the filter value (eg red)
-        filterValue =  $this.attr( 'data-filter' );
+        filterValue = $this.attr( 'data-filter' );
 
         // add/remove the filter value (eg red)
-        if( isChecked ) {
-            filters[filterType].push( filterValue );
+        if (isChecked) {
+            filters[filterType].push(filterValue);
         } else {
-            index = filters[filterType].indexOf( filterValue );
-            filters[filterType].splice( index,  1 );
+            index = filters[filterType].indexOf(filterValue);
+            filters[filterType].splice(index, 1);
         }
 
         // do the maths...
         isotopeFilters = filterBuilder(filters);
 
         // remove holes/blanks in array
-        isotopeFilters = isotopeFilters.filter( function(e){
+        isotopeFilters = isotopeFilters.filter( function(e) {
             return e;
         });
 
@@ -188,4 +222,3 @@ $(function() {
     });
 
 });
-
