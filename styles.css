@@ -179,5 +179,41 @@ body {
     margin-right:5px;
     vertical-align: text-top;
 }
+/* ----for the modal----*/
+.phase-container {
+  
+  font-family:Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  color: #333;
+}
+table.phase-container {
+  width: 850px;
+  border-collapse: collapse;
+  }
+.phase-container caption{
+  font-family:Verdana, Geneva, sans-serif;
+  color:#060;
+  font-size: 22px;
+  text-align:left;
+  }
+  
+.phase-container th {vertical-align:bottom;text-align:left;}
+.phase-container td {vertical-align:top;padding-right:10px;}
 
+.phase-container h2{
+  color:#333;
+  font-size: 16px;
+  text-align:center;
+  margin-top:0;}
 
+.phase-container h3{
+  color:#060;
+  font-size: 13px;
+}
+  
+.question {
+  font-family:Verdana, Geneva, sans-serif;
+  color:#666;
+  font-size: 13px;
+  margin-bottom:0;}
+.phase-container ul li {margin-bottom:10px;margin-left:-20px;}
