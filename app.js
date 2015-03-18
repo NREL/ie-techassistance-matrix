@@ -130,7 +130,7 @@ $(function() {
             template +=  '<p><strong>' + result.agency + '</strong></p>';
             template +=  '<p>' + result.description + '</p>';
             template +=  '<p>Project development phase: </p>';
-            template +=  '<div class="phases">';
+            template +=  '<div class="phases"><a href="#" data-toggle="modal" data-target="#myModal">';
 
             result.phase.map( function(val, idx) {
 
@@ -143,7 +143,7 @@ $(function() {
 
             });
 
-            template +=  '</div>';
+            template +=  '</a></div>';
             template +=  '<p class="types">' + result.type + ' | ' + result.eligibility + '</p>';
             template += '</div>';
 

@@ -209,6 +209,7 @@ table.phase-container {
 .phase-container h3{
   color:#060;
   font-size: 13px;
+  margin-top:3px;
 }
   
 .question {
@@ -216,4 +217,5 @@ table.phase-container {
   color:#666;
   font-size: 13px;
   margin-bottom:0;}
-.phase-container ul li {margin-bottom:10px;margin-left:-20px;}
+
+.phase-container ul li {margin-bottom:10px;list-style-type:disc;margin-left:15px;}
