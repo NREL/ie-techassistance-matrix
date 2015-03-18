@@ -43,6 +43,9 @@
 
     <div class="ui-group">
         <h3>Project Development Phase </h3>
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
         <ul class="checkbox-group" data-filter-type="2" data-filter-group="phase">
             <li><label><input type="checkbox" class="checkbox"
               data-filter=".psep"
@@ -83,6 +86,101 @@
 </div>
 
 
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+            <table class="phase-container">
+            <caption>Project Develoment Phases</caption>
+                <tr>
+                    <th scope="col" id="potential" width="18%">Project Potential</th>
+                    <th scope="col" id="options" width="18%">Project Options</th>
+                    <th scope="col"  id="refinement" width="18%">Project Refinement</th>
+                    <th scope="col"  id="implementation" width="18%">Project Implementation</th>
+                    <th scope="col"  id="operations" width="18%">Project Operations &amp; Maintenance</th>
+                </tr>
+                <tr>
+                    <td colspan="5"><img src="images/phases.jpg" width="850" height="50" alt="phase icons" /></td>
+                    </tr>
+                <tr>
+                    <td><p class="question">What is the potential for doing a project at a scale that meets my goals?</p></td>
+                    <td><p class="question"> How do I interpret these options?</p></td>
+                    <td><p class="question">How do we get the specifics to our environment?</p></td>
+                    <td><p class="question">How do we build it?</p></td>
+                    <td><p class="question">Who will maintain it once it is built?</p></td>
+                </tr>
+                <tr>
+                    <td>
+                    <h3>Data Collection and Opportunity Assessment</h3>
+                        <p>Determine whether the project is viable by evaluating:</p>
+                        <ul>
+                            <li>Possible sites for project</li>
+                            <li>Renewable energy resource data</li>
+                            <li>Tribal facility electric cost data, regulations, and inter-connection requirements</li>
+                            <li>Potential markets and paths to market for project power and renewable sales</li>
+                            <li>Risks and utility rules.</li>
+                        </ul>
+                        </td>
+                    <td>
+                    <h3>Strategy and Detail</h3>
+                        <p>Narrow down the project options, including:</p>
+                        <ul>
+                            <li>Final resource</li>
+                            <li>Tribal role/ownership structure</li>
+                            <li>Tax equity structure</li>
+                            <li>Financing options</li>
+                            <li>Procurement process</li>
+                            <li>Permits.</li>
+                        </ul>
+                        </td>
+                    <td>
+                    <h3>Planning and Development</h3>
+                        <p>Make decisions about:</p>
+                        <ul>
+                            <li>Ownership structure and project team</li>
+                            <li>Permitting (including environmental reviews) and interconnection agreement</li>
+                            <li>Technology, financing, and development costs</li>
+                            <li>Economics</li>
+                            <li>Vendors.</li>
+                        </ul>
+                        </td>
+                    <td>
+                    <h3>Financing and Construction</h3>
+                        <p>Complete physical construction of project, which includes:</p>
+                        <ul>
+                            <li>Project agreements</li>
+                            <li>Vendor contracting process</li>
+                            <li>Preconstruction tasks</li>
+                            <li>Construction and equipment installation</li>
+                            <li>Interconnection</li>
+                            <li>Commission project leading to commercial operations.</li>
+                        </ul>
+                        </td>
+                    <td>
+                    <h3>Long-Term Management</h3>
+                        <p>Implement operations and maintenance plan that accounts for:</p>
+                        <ul>
+                            <li>Equipment maintenance and upkeep</li>
+                            <li>Inverter replacement</li>
+                            <li>Insurance</li>
+                            <li>Labor and staffing</li>
+                            <li>Extended warranty agreements.</li>
+                        </ul>
+                        </td>
+                </tr>
+            </table>
+          </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
