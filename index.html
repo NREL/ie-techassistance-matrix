@@ -9,12 +9,16 @@
 </head>
 <body>
 
-<!-- Filters -->
-<div id="filters">
+<div class="container">
+    <div class="row">
 
-    <div class="ui-group vertical-border">
-        <h3>Type of Assistance</h3>
-        <ul class="checkbox-group" data-filter-type="0">
+    <!-- Filters -->
+    <div id="filters">
+
+    <div class="col-sm-4">
+        <div class="ui-group">
+            <h3>Type of Assistance</h3>
+            <ul class="checkbox-group" data-filter-type="0">
             <li><label><input type="checkbox" class="checkbox" data-filter=".tta">Technical assistance</label></li>
             <li><label><input type="checkbox" class="checkbox" data-filter=".tedu">Education and Capacity building</label></li>
             <li><label><input type="checkbox" class="checkbox" data-filter=".tloan">Loan and loan guarantee programs</label></li>
@@ -22,13 +26,14 @@
             <li><label><input type="checkbox" class="checkbox" data-filter=".tgrant">Grants</label></li>
             <li><label><input type="checkbox" class="checkbox" data-filter=".tir">Information resources</label></li>
 
-        </ul>
+            </ul>
+        </div>
     </div>
 
-
-    <div class="ui-group vertical-border">
-        <h3>Eligibility</h3>
-        <ul class="checkbox-group" data-filter-type="1">
+    <div class="col-sm-4">
+        <div class="ui-group">
+            <h3>Eligibility</h3>
+            <ul class="checkbox-group" data-filter-type="1">
             <li><label><input type="checkbox" class="checkbox" data-filter=".efed">Federally recognized tribes and tribal governments</label></li>
             <li><label><input type="checkbox" class="checkbox" data-filter=".eakcorp">Alaska Native and tribal corporations</label></li>
             <li><label><input type="checkbox" class="checkbox" data-filter=".eakvillage">Alaska Native villages</label></li>
@@ -36,51 +41,56 @@
             <li><label><input type="checkbox" class="checkbox" data-filter=".etu">Tribal universities, utilities, and other organized tribal groups</label></li>
             <li><label><input type="checkbox" class="checkbox" data-filter=".etnonprofit">Tribal nonprofit organizations (503-(C)(3))</label></li>
             <li><label><input type="checkbox" class="checkbox" data-filter=".eter">Tribal energy resource development organizations</label></li>
-        </ul>
+            </ul>
+        </div>
     </div>
 
+    <div class="col-sm-4">
+        <div class="ui-group">
+            <h3>Project Development Phase <button class="glyphicon glyphicon-question-sign" data-toggle="modal" data-target="#myModal" aria-label="Phase Help"></button></h3>
 
+            <ul class="checkbox-group" data-filter-type="2" data-filter-group="phase">
+            <li><label><input type="checkbox" class="checkbox"
+                data-filter=".psep"
+                data-icon="step0.png"
+                data-phase="0">Strategic Energy Planning</label></li>
+            <li><label><input type="checkbox" class="checkbox"
+                data-filter=".ppotential"
+                data-icon="step1.png"
+                data-phase="1">Phase 1: Project Potential</label></li>
+            <li><label><input type="checkbox" class="checkbox"
+                data-filter=".ppoptions"
+                data-icon="step2.png"
+                data-phase="2">Phase 2: Project Options</label></li>
+            <li><label><input type="checkbox" class="checkbox"
+                data-filter=".pref"
+                data-icon="step3.png"
+                data-phase="3">Phase 3: Project Refinement</label></li>
+            <li><label><input type="checkbox" class="checkbox"
+                data-filter=".pimple"
+                data-icon="step4.png"
+                data-phase="4">Phase 4: Project Implementation</label></li>
+            <li><label><input type="checkbox" class="checkbox"
+                data-filter=".pops"
+                data-icon="step5.png"
+                data-phase="5">Phase 5: Project Operations &amp; Maintenance</label></li>
 
-    <div class="ui-group">
-        <h3>Project Development Phase <button class="glyphicon glyphicon-question-sign" data-toggle="modal" data-target="#myModal" aria-label="Phase Help"></button></h3>
-        
-        <ul class="checkbox-group" data-filter-type="2" data-filter-group="phase">
-            <li><label><input type="checkbox" class="checkbox"
-              data-filter=".psep"
-              data-icon="step0.png"
-              data-phase="0">Strategic Energy Planning</label></li>
-            <li><label><input type="checkbox" class="checkbox"
-              data-filter=".ppotential"
-              data-icon="step1.png"
-              data-phase="1">Phase 1: Project Potential</label></li>
-            <li><label><input type="checkbox" class="checkbox"
-              data-filter=".ppoptions"
-              data-icon="step2.png"
-              data-phase="2">Phase 2: Project Options</label></li>
-            <li><label><input type="checkbox" class="checkbox"
-              data-filter=".pref"
-              data-icon="step3.png"
-              data-phase="3">Phase 3: Project Refinement</label></li>
-            <li><label><input type="checkbox" class="checkbox"
-              data-filter=".pimple"
-              data-icon="step4.png"
-              data-phase="4">Phase 4: Project Implementation</label></li>
-            <li><label><input type="checkbox" class="checkbox"
-              data-filter=".pops"
-              data-icon="step5.png"
-              data-phase="5">Phase 5: Project Operations &amp; Maintenance</label></li>
+            </ul>
+        </div>
+    </div>
+    </div> <!-- /#filters -->
 
-        </ul>
     </div>
 
-</div>
-
-
-
-<!-- cards-items -->
-<div id="container"></div>
-<div class="message hide">
-    <p>There are no opportunities within your selection. Please broaden your selection.</p>
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- cards-items -->
+            <div id="container"></div>
+            <div class="message hide">
+                <p>There are no opportunities within your selection. Please broaden your selection.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -174,7 +184,7 @@
           </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        
+
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

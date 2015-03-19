@@ -12,24 +12,29 @@ body {
     display: none;
 }
 
-/* ---- button-group ---- */
-
-.checkbox-group:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-
 
 /* ui group */
 
 .ui-group {
   display: table-cell;
   vertical-align: top;
-  padding-left:15px;
 }
-.vertical-border {border-right:1px solid #999;}
+
+.ui-group li {
+    margin-left: 2em;
+    text-indent: -1.4em;
+}
+
+.checkbox {
+    margin-right: 5px;
+}
+
+.checkbox-group:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 
 ul {
     margin-left: 0;
@@ -41,8 +46,8 @@ li {
 }
 
 .ui-group .checkbox-group {
-  display: inline-block;
-  margin-right: 20px;
+    display: inline-block;
+    margin: 0;
 }
 
 /**** Isotope Filtering ****/
@@ -117,37 +122,17 @@ body {
 }
 
 
-/* My styles */
-#container{width:910px;}
 #filters {
-    display:block;
-    width:910px;
-    color:#000;
-    background-color:#dedede;
-    border:1px #ccc solid;
+    display: table;
+    color: #000;
+    background-color: #dedede;
+    border: 1px #ccc solid;
     margin-bottom: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    }
+    padding-bottom: 1em;
+}
 
-#categories a,
-#categories a:visited{
-    text-decoration:none;
-    color:#464646;
-    padding:4px 8px;
-}
-#categories a.selected{
-    background-color:#B75700;
-    color:#fff;
-    cursor:default;
-}
-#categories a:hover {
-    background-color:#929292;
-    color:#fff;
-}
-#categories a.selected:hover {
-    background-color:#B75700;
-}
 
 .item {
     width:280px;
@@ -181,7 +166,7 @@ body {
 }
 /* ----for the modal----*/
 .phase-container {
-  
+
   font-family:Verdana, Geneva, sans-serif;
   font-size: 11px;
   color: #333;
@@ -196,7 +181,7 @@ table.phase-container {
   font-size: 22px;
   text-align:left;
   }
-  
+
 .phase-container th {vertical-align:bottom;text-align:left;}
 .phase-container td {vertical-align:top;padding-right:10px;}
 
@@ -211,9 +196,9 @@ table.phase-container {
   font-size: 13px;
   margin-top:3px;
 }
-  
+
 .question {
-  font-family:Verdana, Geneva, sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
   color:#666;
   font-size: 13px;
   margin-bottom:0;}
